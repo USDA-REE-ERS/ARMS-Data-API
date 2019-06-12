@@ -1,8 +1,10 @@
-## Welcome to GitHub Pages
+## ARMS-Data-API
 
-You can use the [editor on GitHub](https://github.com/USDA-ERS/ARMS-Data-API/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+USDA’s Economic Research Services (ERS) is making data from USDA’s Agriculture Resource Management Survey (ARMS) available through an Application Programming Interface (API) to better serve customers. The data in the API are available in JSON format and provide attribute-based querying. The data are also available in bulk files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This page provides a brief explanation of the API to get you started. For user convenience, we provide demos using R: open source statistical programming language.
+
+A list of variables, by report, is provided in section 3. An exhaustive list of all variables and detailed descriptions is found in the file AllVariables.csv.
 
 ### Markdown
 
