@@ -72,3 +72,10 @@ _OPTION:_ returns the schema for the survey data REST resource
 }`
 
 The above retrieves "Gross Farm Income" for years 2011 through 2016 for "All States" and broken by Category = NASS regions and Category2 = Collapsed Farm Typology.
+
+`GET https://api.ers.usda.gov/data/arms/surveydata?year=2015,2016&state=all&report=income+statement&farmtype=operator+households&category=collapsed+farm+typology&category_value=commercial`
+This GET request returns income statements for years 2015 and 2016 of commercial farms across all States.
+
+**Note:** Multiple values for fields that allow multiple values are separated by "commas" (,), and names of fields exceeding more than one word are separated by a "plus" (+). Different query parameters such as year, states, report, etc. are separated by an "ampersand" (&).
+
+
