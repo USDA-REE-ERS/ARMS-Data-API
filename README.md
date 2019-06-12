@@ -4,7 +4,7 @@ USDA’s Economic Research Services (ERS) is making data from USDA’s Agricultu
 
 This page provides a brief explanation of the API to get you started. For user convenience, we provide demos using R: open source statistical programming language.
 
-A list of variables, by report, is provided in section 3. An exhaustive list of all variables and detailed descriptions is found in the file AllVariables.csv.
+A list of variables, by report, is provided in section 3. An exhaustive list of all variables and detailed descriptions is found in the file <a href="https://www.ers.usda.gov/media/10257/allvariables.csv">AllVariables.csv</a>.
 
 ### Markdown
 
