@@ -15,7 +15,17 @@ Users of the ARMS data API are required to sign up for an API key via api.data.g
 
 **Note:** A key is not required to use the bulk download facility.
 
+### 2.2 Using the API
+The API support GraphQL and REST API methods:
 
+*GraphQL
+GraphQL is a modern method to easily interact with an API. More information on GraphQL is available. A GraphQL client, such as ChromeiQL, is needed to interact with the ARMS API. 
+
+The GraphQL endpoint for ARMS data is https://api.ers.usda.gov/data/arms/graphql.
+ 
+* Rest API
+
+Rest API endpoint: https://api.ers.usda.gov/data/
 ```markdown
 Syntax highlighted code block
 
