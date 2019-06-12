@@ -54,4 +54,21 @@ _Method:_ supports GET only
 
 `GET: https://api.ers.usda.gov/data/arms/year`
 
+**/arms/surveydata**
 
+_Input fields:_ "Year" is a required field; at least one of the two input fields ("report" or "variable") is also required
+
+_Method:_ supports GET and POST
+
+_OPTION:_ returns the schema for the survey data REST resource
+
+`POST https://api.ers.usda.gov/data/arms/surveydata
+{
+ "year": [2011, 2012, 2013, 2014, 2015, 2016]
+ "state": "all"
+ "variable": "igcfi"
+ "category": "NASS Regions"
+ "category2": "Collapsed Farm Typology"
+}`
+
+The above retrieves "Gross Farm Income" for years 2011 through 2016 for "All States" and broken by Category = NASS regions and Category2 = Collapsed Farm Typology.
