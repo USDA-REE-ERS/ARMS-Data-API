@@ -34,7 +34,12 @@ The REST API supports POST and GET methods for calling data, except where noted.
 
 Each endpoint also supports the OPTIONS method that returns the endpoint schema and details on input fields and requirements, such as format, whether the field allows
 
+**/arms/state**
 
-[Link](url) and ![Image](src)
-```
+This API resource gets all States and the metadata and variables available for each of the States.
 
+Input fields: not needed
+
+Method: supports GET only
+
+`GET: https://api.ers.usda.gov/data/arms/state`
