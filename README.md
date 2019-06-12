@@ -44,4 +44,14 @@ _Method_: supports GET only
 
 `GET: https://api.ers.usda.gov/data/arms/state`
 
+**/arms/year**
+
+This API resource gets all available years for which data are available.
+
+_Input fields:_ not needed
+
+_Method:_ supports GET only
+
+`GET: https://api.ers.usda.gov/data/arms/year`
+
 
