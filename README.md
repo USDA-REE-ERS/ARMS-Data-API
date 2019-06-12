@@ -69,7 +69,8 @@ _OPTION:_ returns the schema for the survey data REST resource
  "variable": "igcfi"
  "category": "NASS Regions"
  "category2": "Collapsed Farm Typology"
-}```
+}
+```
 
 The above retrieves "Gross Farm Income" for years 2011 through 2016 for "All States" and broken by Category = NASS regions and Category2 = Collapsed Farm Typology.
 
