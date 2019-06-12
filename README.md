@@ -91,6 +91,7 @@ This resource can be used in two ways:
     1. When used without any input variables, ALL categories and subcategories are returned.
 
 `POST https://api.ers.usda.gov/data/arms/category`
+
 `GET https://api.ers.usda.gov/data/arms/category`
 
     2. When used with a specific category name, all details and subcategories within that category are returned
@@ -99,6 +100,7 @@ This resource can be used in two ways:
 { 
  "name": "Collapsed Farm Typology" 
 }`   
+
 `GET https://api.ers.usda.gov/data/arms/category?id=age,ftypll`   
 
 This query returns Category-related information for "Operator age" (id=age) and "Farm Typology" (id = ftypll)
@@ -108,22 +110,29 @@ This query returns Category-related information for "Operator age" (id=age) and 
 This API resource gets available reports with the relevant metadata and variables available for each report. This resource can be used in two ways:
 
     1. Retrieve a list of ALL reports.
+    
 `POST https://api.ers.usda.gov/data/arms/report`
+
 `GET https://api.ers.usda.gov/data/arms/report`
+
     2. Retrieve metadata and variables for a specific report based on name, ID, or keyword.
 
-POST https://api.ers.usda.gov/data/arms/report
+`POST https://api.ers.usda.gov/data/arms/report
 {
 "name": "balance sheet"
-}
-/arms/variable
+}`
+
+**/arms/variable**
 
 This API resource gets variables with the relevant information and metadata for each of the variables used in ARMS. This resource can be used in two ways:
 
-List ALL variables.
-POST https://api.ers.usda.gov/data/arms/variable
-GET https://api.ers.usda.gov/data/arms/variable
-2. Search "variable" by ID, report, name, and keywords. All input fields are optional, and one can use all or none of them to get the desired data.
+    1. List ALL variables.
+
+`POST https://api.ers.usda.gov/data/arms/variable`
+
+`GET https://api.ers.usda.gov/data/arms/variable`
+
+    2. Search "variable" by ID, report, name, and keywords. All input fields are optional, and one can use all or none of them to get the desired data.
 
 POST https://api.ers.usda.gov/data/arms/variable
  {
