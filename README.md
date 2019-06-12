@@ -38,8 +38,10 @@ Each endpoint also supports the OPTIONS method that returns the endpoint schema 
 
 This API resource gets all States and the metadata and variables available for each of the States.
 
-Input fields: not needed
+_Input fields:_ not needed
 
-Method: supports GET only
+_Method_: supports GET only
 
 `GET: https://api.ers.usda.gov/data/arms/state`
+
+
