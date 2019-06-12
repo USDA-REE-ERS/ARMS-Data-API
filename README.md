@@ -88,13 +88,13 @@ _Method:_ supports GET and POST
 
 This resource can be used in two ways:
 
-    1. When used without any input variables, ALL categories and subcategories are returned.
+--1. When used without any input variables, ALL categories and subcategories are returned.
 
 `POST https://api.ers.usda.gov/data/arms/category`
 
 `GET https://api.ers.usda.gov/data/arms/category`
 
-    2. When used with a specific category name, all details and subcategories within that category are returned
+--2. When used with a specific category name, all details and subcategories within that category are returned
 
 `POST https://api.ers.usda.gov/data/arms/category
 { 
