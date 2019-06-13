@@ -42,7 +42,7 @@ _Input fields:_ not needed
 
 _Method_: supports GET only
 
-```rest 
+``` 
 GET: https://api.ers.usda.gov/data/arms/state
 ```
 
