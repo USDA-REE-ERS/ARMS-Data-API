@@ -175,7 +175,7 @@ ARMS reports are a collection of financial data points about U.S.-based farms th
 
 The ARMS team has created some commonly used tailored reports from the ARMS dataset.  Currently, the following tailored reports are available on the WebTool and through the API:
 
-* Farm Business Balance Sheet*
+* Farm Business Balance Sheet
 * Farm Business Income Statement
 * Farm Business Financial Ratios
 * Structural Characteristics
@@ -185,81 +185,81 @@ The ARMS team has created some commonly used tailored reports from the ARMS data
 * Operator Household Balance Sheet
  
 ## 4. Variables
-Each report contains a different set of variables. A list of all variables sorted by report and with detailed descriptions and short IDs may be found in the file AllVariables.csv.
+Each report contains a different set of variables. A list of all variables sorted by report and with detailed descriptions and short IDs may be found in the file <a href="https://www.ers.usda.gov/media/10257/allvariables.csv">AllVariables.csv</a>.
 
 ## 5. Available Categories
 Categories are meta tags that provide context for the data. The available categories are listed below with their short IDs inside the parenthesis. Values for each category and their definitions may be found in the file <a href="https://www.ers.usda.gov/media/10257/allvariables.csv">AllVariables.csv</a>.
 
-..*Residence farms
-..*Intermediate farms
-..*Commercial farms
+* Residence farms
+* Intermediate farms
+* Commercial farms
 
 Economic Class (sal)
 
-..*$1,000,000 or more
-..*$500,000 to $999,999
-..*$250,000 to $499,999
-..*$100,000 to $249,999
-..*less than $100,000
+* $1,000,000 or more
+* $500,000 to $999,999
+* $250,000 to $499,999
+* $100,000 to $249,999
+* less than $100,000
 
 Farm Typology (ftyppl)
 
-..*Retirement farms (2012 to present)
-..*Off-farm occupation farms (2012 to present)
-..*Farming occupation/lower sales farms (2012 to present)
-..*Farming occupation/moderate-sales farms (2012 to present)
-..*Midsize farms (2012 to present)
-..*Large farms (2012 to present)
-..*Very large farms (2012 to present)
-..*Nonfamily farms (2012 to present)
-..*Retirement farms (1996 through 2011)
-..*Residential/lifestyle farms (1996 through 2011)
-..*Farming occupation/lower sales farms (1996 through 2011)
-..*Farming occupation/moderate-sales farms (1996 through 2011)
-..*Large farms (1996 through 2011)
-..*Very large farms (1996 through 2011)
-..*Nonfamily farms (1996 through 2011)
+* Retirement farms (2012 to present)
+* Off-farm occupation farms (2012 to present)
+* Farming occupation/lower sales farms (2012 to present)
+* Farming occupation/moderate-sales farms (2012 to present)
+* Midsize farms (2012 to present)
+* Large farms (2012 to present)
+* Very large farms (2012 to present)
+* Nonfamily farms (2012 to present)
+* Retirement farms (1996 through 2011)
+* Residential/lifestyle farms (1996 through 2011)
+* Farming occupation/lower sales farms (1996 through 2011)
+* Farming occupation/moderate-sales farms (1996 through 2011)
+* Large farms (1996 through 2011)
+* Very large farms (1996 through 2011)
+* Nonfamily farms (1996 through 2011)
 
 Operator age (age)
 
-..*34 years or younger
-..*35 to 44 years old
-..*45 to 54 years old
-..*55 to 64 years old
-..*65 years or older
+* 34 years or younger
+* 35 to 44 years old
+* 45 to 54 years old
+* 55 to 64 years old
+* 65 years or older
 
 Farm Resource Region (reg)
 
-..*Heartland
-..*Northern Crescent
-..*Northern Great Plains
-..*Prairie Gateway
-..*Eastern Uplands
-..*Southern Seaboard
-..*Fruitful Rim
-..*Basin and Range
-..*Mississippi Portal
+* Heartland
+* Northern Crescent
+* Northern Great Plains
+* Prairie Gateway
+* Eastern Uplands
+* Southern Seaboard
+* Fruitful Rim
+* Basin and Range
+* Mississippi Portal
 
 NASS region (n5reg)
 
-..*Atlantic region
-..*South region
-..*Midwest region
-..*Plains region
-..*West region
+* Atlantic region
+* South region
+* Midwest region
+* Plains region
+* West region
 
 Production Specialty (spec)
 
-..*Tobacco, cotton, peanuts
-..*Other field crops
-..*Cattle
-..*Dairy
-..*Hogs, poultry, other
-..*Vegetables
-..*Nursery and greenhouse
-..*All cash grains
-..*Specialty crops
-..*All other livestock
+* Tobacco, cotton, peanuts
+* Other field crops
+* Cattle
+* Dairy
+* Hogs, poultry, other
+* Vegetables
+* Nursery and greenhouse
+* All cash grains
+* Specialty crops
+* All other livestock
  
 ## 6. API Pagination (aka scroll)
 This section only applies to data extracted at the endpoint **arms/surveydata/scroll**
