@@ -68,6 +68,7 @@ _OPTION:_ returns the schema for the survey data REST resource
 
 ```
 POST https://api.ers.usda.gov/data/arms/surveydata
+
 {
  "year": [2011, 2012, 2013, 2014, 2015, 2016]
  "state": "all"
@@ -83,7 +84,7 @@ The above retrieves "Gross Farm Income" for years 2011 through 2016 for "All Sta
 GET https://api.ers.usda.gov/data/arms/surveydata?year=2015,2016&state=all&report=income+statement&farmtype=operator+households&category=collapsed+farm+typology&category_value=commercial```
 This GET request returns income statements for years 2015 and 2016 of commercial farms across all States.
 
-**Note:** Multiple values for fields that allow multiple values are separated by "commas" (,), and names of fields exceeding more than one word are separated by a "plus" (+). Different query parameters such as year, states, report, etc. are separated by an "ampersand" (&).
+**Note:**  Multiple values for fields that allow multiple values are separated by "commas" (,), and names of fields exceeding more than one word are separated by a "plus" (+). Different query parameters such as year, states, report, etc. are separated by an "ampersand" (&).
 
 **/arms/category**
 
@@ -95,18 +96,24 @@ _Method:_ supports GET and POST
 
 This resource can be used in two ways:
 
---1. When used without any input variables, ALL categories and subcategories are returned.
+  1. When used without any input variables, ALL categories and subcategories are returned.
 
-```POST https://api.ers.usda.gov/data/arms/category```
+```
+POST https://api.ers.usda.gov/data/arms/category
+```
 
-```GET https://api.ers.usda.gov/data/arms/category```
+```
+GET https://api.ers.usda.gov/data/arms/category
+```
 
---2. When used with a specific category name, all details and subcategories within that category are returned
+  2. When used with a specific category name, all details and subcategories within that category are returned
 
-`POST https://api.ers.usda.gov/data/arms/category
+```POST https://api.ers.usda.gov/data/arms/category
+
 { 
  "name": "Collapsed Farm Typology" 
-}`   
+}
+```   
 
 `GET https://api.ers.usda.gov/data/arms/category?id=age,ftypll`   
 
@@ -116,30 +123,37 @@ This query returns Category-related information for "Operator age" (id=age) and 
 
 This API resource gets available reports with the relevant metadata and variables available for each report. This resource can be used in two ways:
 
-    1. Retrieve a list of ALL reports.
+  1. Retrieve a list of ALL reports.
     
-`POST https://api.ers.usda.gov/data/arms/report`
+```
+POST https://api.ers.usda.gov/data/arms/report
+```
 
-`GET https://api.ers.usda.gov/data/arms/report`
+```
+GET https://api.ers.usda.gov/data/arms/report
+```
 
-    2. Retrieve metadata and variables for a specific report based on name, ID, or keyword.
+  2. Retrieve metadata and variables for a specific report based on name, ID, or keyword.
 
-`POST https://api.ers.usda.gov/data/arms/report
+```
+POST https://api.ers.usda.gov/data/arms/report
+
 {
 "name": "balance sheet"
-}`
+}
+```
 
 **/arms/variable**
 
 This API resource gets variables with the relevant information and metadata for each of the variables used in ARMS. This resource can be used in two ways:
 
-    1. List ALL variables.
+  1. List ALL variables.
 
-`POST https://api.ers.usda.gov/data/arms/variable`
+```POST https://api.ers.usda.gov/data/arms/variable```
 
-`GET https://api.ers.usda.gov/data/arms/variable`
+```GET https://api.ers.usda.gov/data/arms/variable```
 
-    2. Search "variable" by ID, report, name, and keywords. All input fields are optional, and one can use all or none of them to get the desired data.
+  2. Search "variable" by ID, report, name, and keywords. All input fields are optional, and one can use all or none of them to get the desired data.
 
 POST https://api.ers.usda.gov/data/arms/variable
  {
