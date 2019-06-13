@@ -169,7 +169,7 @@ _Method:_ supports GET and POST
 `GET https://api.ers.usda.gov/data/arms/farmtype`
 `GET https://api.ers.usda.gov/data/arms/farmtype?name=operator+households`
 
-## 3. Reports##
+## 3. Reports
 
 ARMS reports are a collection of financial data points about U.S.-based farms that can be sorted and viewed in a variety of ways, including national level, State level, farmer type, and farmer age.
 
@@ -184,10 +184,10 @@ The ARMS team has created some commonly used tailored reports from the ARMS data
 ..*Operator Household Income
 ..*Operator Household Balance Sheet
  
-## 4. Variables##
+## 4. Variables
 Each report contains a different set of variables. A list of all variables sorted by report and with detailed descriptions and short IDs may be found in the file AllVariables.csv.
 
-## 5. Available Categories##
+## 5. Available Categories
 Categories are meta tags that provide context for the data. The available categories are listed below with their short IDs inside the parenthesis. Values for each category and their definitions may be found in the file <a href="https://www.ers.usda.gov/media/10257/allvariables.csv">AllVariables.csv</a>.
 
 ..*Residence farms
@@ -261,7 +261,7 @@ Production Specialty (spec)
 ..*Specialty crops
 ..*All other livestock
  
-## 6. API Pagination (aka scroll)##
+## 6. API Pagination (aka scroll)
 This section only applies to data extracted at the endpoint **arms/surveydata/scroll**
 
 ARMS is a huge database with tens of thousands of queryable lines of data. All the data can not be returned in one API call. Hence, the ARMS API supports the concept of paging through the dataset and calling the data multiple times to retrieve all the desired data points.  This is achievable by use of a "scroll_id" and "page_size." The default value of "page_size" is 2,000, which means that up to 2,000 records will be sent per API call. If the query returns more than 2,000 records, then the balance of the data records may be retrieved using the scroll method for ARMS data. Each time the scroll function is used, it returns the page number and the remaining scrolls left. The scroll_id itself has a limited longevity. Each scroll_id expires within 4 hours and can be renewed by resending the original API request. Once a particular page has been called by the scroll resource, the data for that page will not be available again to be called by the same scroll_id and new scroll_id will need to be created and used. Scroll works sequentially moving forward and cannot go back. To go back, one needs to start with the original API call and restart a new scroll.
