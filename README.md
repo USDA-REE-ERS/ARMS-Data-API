@@ -175,13 +175,13 @@ ARMS reports are a collection of financial data points about U.S.-based farms th
 
 The ARMS team has created some commonly used tailored reports from the ARMS dataset.  Currently, the following tailored reports are available on the WebTool and through the API:
 
-..*Farm Business Balance Sheet
-..*Farm Business Income Statement
-..*Farm Business Financial Ratios
-..*Structural Characteristics
-..*Farm Business Debt Repayment Capacity
-..*Government Payments
-..*Operator Household Income
+*Farm Business Balance Sheet
+*Farm Business Income Statement
+*Farm Business Financial Ratios
+*Structural Characteristics
+*Farm Business Debt Repayment Capacity
+*Government Payments
+*Operator Household Income
 ..*Operator Household Balance Sheet
  
 ## 4. Variables
