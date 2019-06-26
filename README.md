@@ -142,7 +142,7 @@ This API resource gets variables with the relevant information and metadata for 
 ```POST https://api.ers.usda.gov/data/arms/variable?api_key=YOUR_API_KEY
  {
   "report": "Business Balance Sheet"          
-  "name": "Liabilities current debt
+  "name": "Liabilities current debt"
  }
  ```
  
@@ -157,7 +157,7 @@ _Method:_ supports GET and POST
 `POST https://api.ers.usda.gov/data/arms/farmtype?api_key=YOUR_API_KEY`
 
 `{
-  "name": "operator households
+  "name": "operator households"
 }` 
 
 `GET https://api.ers.usda.gov/data/arms/farmtype?api_key=YOUR_API_KEY`
