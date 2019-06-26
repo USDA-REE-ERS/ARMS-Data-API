@@ -303,7 +303,8 @@ Scroll_id is the unique ID related with your query and stays in the active memor
 
 If the query that you run returns less than the page_size that you specify or the default page size of 2,000 (if you do not specify a page size), then no scroll information is sent. In this case, only total record count is sent, for example:
 
-```"total": {
+```
+"total": {
    "record_count": 1410
  }
 ```
