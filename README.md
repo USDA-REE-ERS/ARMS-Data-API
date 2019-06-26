@@ -18,12 +18,6 @@ Users of the ARMS data API are required to sign up for an API key via api.data.g
 ### 2.2 Using the API
 The API support GraphQL and REST API methods:
 
-* GraphQL
-
-GraphQL is a modern method to easily interact with an API. More information on GraphQL is available. A GraphQL client, such as ChromeiQL, is needed to interact with the ARMS API. 
-
-The GraphQL endpoint for ARMS data is https://api.ers.usda.gov/data/arms/graphql.
- 
 * Rest API
 
 Rest API endpoint: https://api.ers.usda.gov/data/
@@ -43,7 +37,7 @@ _Input fields:_ not needed
 _Method_: supports GET only
 
 ``` 
-GET: https://api.ers.usda.gov/data/arms/state
+GET https://api.ers.usda.gov/data/arms/state?api_key=YOUR_API_KEY
 ```
 
 **/arms/year**
@@ -55,7 +49,7 @@ _Input fields:_ not needed
 _Method:_ supports GET only
 
 ```
-GET: https://api.ers.usda.gov/data/arms/year
+GET https://api.ers.usda.gov/data/arms/year?api_key=YOUR_API_KEY
 ```
 
 **/arms/surveydata**
@@ -67,7 +61,7 @@ _Method:_ supports GET and POST
 _OPTION:_ returns the schema for the survey data REST resource
 
 ```
-POST https://api.ers.usda.gov/data/arms/surveydata
+POST https://api.ers.usda.gov/data/arms/surveydata?api_key=YOUR_API_KEY
 
 {
  "year": [2011, 2012, 2013, 2014, 2015, 2016]
@@ -80,7 +74,7 @@ POST https://api.ers.usda.gov/data/arms/surveydata
 
 The above retrieves "Gross Farm Income" for years 2011 through 2016 for "All States" and broken by Category = NASS regions and Category2 = Collapsed Farm Typology.
 
-```GET https://api.ers.usda.gov/data/arms/surveydata?year=2015,2016&state=all&report=income+statement&farmtype=operator+households&category=collapsed+farm+typology&category_value=commercial```
+```GET https://api.ers.usda.gov/data/arms/surveydata?api_key=YOUR_API_KEY?year=2015,2016&state=all&report=income+statement&farmtype=operator+households&category=collapsed+farm+typology&category_value=commercial```
 This GET request returns income statements for years 2015 and 2016 of commercial farms across all States.
 
 **Note:**  Multiple values for fields that allow multiple values are separated by "commas" (,), and names of fields exceeding more than one word are separated by a "plus" (+). Different query parameters such as year, states, report, etc. are separated by an "ampersand" (&).
@@ -97,13 +91,13 @@ _Method:_ supports GET and POST
 
    1. When used without any input variables, ALL categories and subcategories are returned.
 
-`POST https://api.ers.usda.gov/data/arms/category`
+`POST https://api.ers.usda.gov/data/arms/category?api_key=YOUR_API_KEY`
 
-`GET https://api.ers.usda.gov/data/arms/category`
+`GET https://api.ers.usda.gov/data/arms/category?api_key=YOUR_API_KEY`
 
    2. When used with a specific category name, all details and subcategories within that category are returned
 
-`POST https://api.ers.usda.gov/data/arms/category`
+`POST https://api.ers.usda.gov/data/arms/category?api_key=YOUR_API_KEY`
 
 ```{ 
  "name": "Collapsed Farm Typology" 
@@ -120,13 +114,13 @@ This query returns Category-related information for "Operator age" (id=age) and 
 
    1. Retrieve a list of ALL reports
     
-`POST https://api.ers.usda.gov/data/arms/report`
+`POST https://api.ers.usda.gov/data/arms/report?api_key=YOUR_API_KEY`
 
-`GET https://api.ers.usda.gov/data/arms/report`
+`GET https://api.ers.usda.gov/data/arms/report?api_key=YOUR_API_KEY`
 
    2. Retrieve metadata and variables for a specific report based on name, ID, or keyword.
 
-`POST https://api.ers.usda.gov/data/arms/report`
+`POST https://api.ers.usda.gov/data/arms/report?api_key=YOUR_API_KEY`
 
 ```{
 "name": "balance sheet"
@@ -139,13 +133,13 @@ This API resource gets variables with the relevant information and metadata for 
 
   1. List ALL variables.
 
-```POST https://api.ers.usda.gov/data/arms/variable```
+```POST https://api.ers.usda.gov/data/arms/variable?api_key=YOUR_API_KEY```
 
-```GET https://api.ers.usda.gov/data/arms/variable```
+```GET https://api.ers.usda.gov/data/arms/variable?api_key=YOUR_API_KEY```
 
   2. Search "variable" by ID, report, name, and keywords. All input fields are optional, and one can use all or none of them to get the desired data.
 
-```POST https://api.ers.usda.gov/data/arms/variable
+```POST https://api.ers.usda.gov/data/arms/variable?api_key=YOUR_API_KEY
  {
   "report": "Business Balance Sheet"          
   "name": "Liabilities current debt
@@ -160,14 +154,22 @@ _Input fields:_ optional
 
 _Method:_ supports GET and POST
 
-`POST https://api.ers.usda.gov/data/arms/farmtype`
+`POST https://api.ers.usda.gov/data/arms/farmtype?api_key=YOUR_API_KEY`
 
 `{
   "name": "operator households
 }` 
 
-`GET https://api.ers.usda.gov/data/arms/farmtype`
-`GET https://api.ers.usda.gov/data/arms/farmtype?name=operator+households`
+`GET https://api.ers.usda.gov/data/arms/farmtype?api_key=YOUR_API_KEY`
+`GET https://api.ers.usda.gov/data/arms/farmtype?api_key=YOUR_API_KEY&name=operator+households`
+
+* GraphQL
+
+GraphQL is a modern method to easily interact with an API. The GraphQL endpoint for ARMS data is https://api.ers.usda.gov/data/arms/graphql.
+
+* GraphQL methods
+
+GraphQL is for advanced users. If you are not familiar with GraphQL, use our REST API. A GraphQL client, such as ChromeiQL, is needed to interact with the ARMS API. <a href="https://graphql.org/">More information on GraphQL</a> is available.
 
 ## 3. Reports
 
@@ -271,25 +273,25 @@ The following information (an example) is returned with the data payload of your
 ```
 "info": {
 "timing": {
-"searching": 73
-"formatting": 10
-"executing": 236
+"searching": 73,
+"formatting": 10,
+"executing": 236,
 "unit": "ms"
- },
-   "result_coverage": "page"
- "total": {
- "record_count": 29779
-"fetched_records": 6000
+},
+"result_coverage": "page",
+"total": {
+"record_count": 29779,
+"fetched_records": 6000,
 "page_count": 15
 },
 "page": {
-"current": 3
-"record_count": 2000
-"size_limit": 2000
- "is_last": false
- },
-"scroll_id": "DnF1ZXJ5VGhlbkZldGNoBQAAAAAADiJ4FmNEOGoxUVVkUmlpVnR5OXMxaURMYncAAAAAAA4ieRZjRDhqMVFVZFJpaVZ0eTlzMWlETGJ3AAAAAAAOInoWY0Q4ajFRVWRSaWlWdHk5czFpRExidwAAAAAADiJ7FmNEOGoxUVVkUmlpVnR5OXMxaURMYncAAAAAAA4ifBZjRDhqMVFVZFJpaVZ0eTlzMWlETGJ3"
+"current": 3,
+"record_count": 2000,
+"size_limit": 2000,
+"is_last": false
 },
+"scroll_id": "DnF1ZXJ5VGhlbkZldGNoBQAAAAAADiJ4FmNEOGoxUVVkUmlpVnR5OXMxaURMYncAAAAAAA4ieRZjRDhqMVFVZFJpaVZ0eTlzMWlETGJ3AAAAAAAOInoWY0Q4ajFRVWRSaWlWdHk5czFpRExidwAAAAAADiJ7FmNEOGoxUVVkUmlpVnR5OXMxaURMYncAAAAAAA4ifBZjRDhqMVFVZFJpaVZ0eTlzMWlETGJ3"
+
 ```
 The timing information is performance-related information of your particular query.
 
