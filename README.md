@@ -308,3 +308,13 @@ If the query that you run returns less than the page_size that you specify or th
    "record_count": 1410
  }
 ```
+## 7. Updates and Revisions
+August 27, 2019
+
+A database update was released on August 27, 2019, containing revised data for 2017 and other changes (see full description on the ARMS data product <a href="http://cmsv2.usda.net/data-products/arms-farm-financial-and-crop-production-practices/update-and-revision-history/">here</a>).
+
+* The “searching”, and “formatting” properties of the “info” section of the API query result have been removed in this version of the API.
+* Each record of the category query result contains a new category “description” property.
+* Each record of the report query result contains a new report “desc” property.
+* Each record of the farmtype query result contains a new farmtype “desc” property.
+* Each record of the surveydata query result contains a new “decimal_display” property, indicating the proper number of decimals to display for the value.
