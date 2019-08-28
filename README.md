@@ -263,53 +263,8 @@ Production Specialty (spec)
 * Specialty crops
 * All other livestock
  
-## 6. API Pagination (aka scroll)
-This section only applies to data extracted at the endpoint **arms/surveydata/scroll**
-
-ARMS is a huge database with tens of thousands of queryable lines of data. All the data can not be returned in one API call. Hence, the ARMS API supports the concept of paging through the dataset and calling the data multiple times to retrieve all the desired data points.  This is achievable by use of a "scroll_id" and "page_size." The default value of "page_size" is 2,000, which means that up to 2,000 records will be sent per API call. If the query returns more than 2,000 records, then the balance of the data records may be retrieved using the scroll method for ARMS data. Each time the scroll function is used, it returns the page number and the remaining scrolls left. The scroll_id itself has a limited longevity. Each scroll_id expires within 4 hours and can be renewed by resending the original API request. Once a particular page has been called by the scroll resource, the data for that page will not be available again to be called by the same scroll_id and new scroll_id will need to be created and used. Scroll works sequentially moving forward and cannot go back. To go back, one needs to start with the original API call and restart a new scroll.
-
-The following information (an example) is returned with the data payload of your API call for surveydata REST resource:
-
-```
-"info": {
-"timing": {
-"searching": 73,
-"formatting": 10,
-"executing": 236,
-"unit": "ms"
-},
-"result_coverage": "page",
-"total": {
-"record_count": 29779,
-"fetched_records": 6000,
-"page_count": 15
-},
-"page": {
-"current": 3,
-"record_count": 2000,
-"size_limit": 2000,
-"is_last": false
-},
-"scroll_id": "DnF1ZXJ5VGhlbkZldGNoBQAAAAAADiJ4FmNEOGoxUVVkUmlpVnR5OXMxaURMYncAAAAAAA4ieRZjRDhqMVFVZFJpaVZ0eTlzMWlETGJ3AAAAAAAOInoWY0Q4ajFRVWRSaWlWdHk5czFpRExidwAAAAAADiJ7FmNEOGoxUVVkUmlpVnR5OXMxaURMYncAAAAAAA4ifBZjRDhqMVFVZFJpaVZ0eTlzMWlETGJ3"
-
-```
-The timing information is performance-related information of your particular query.
-
-The total references the information on the number of records related to your query. It includes total record count, the number of fetched records, and the total pages.
-
-Page references the current page, the record count of current page, and the size limit.
-
-Scroll_id is the unique ID related with your query and stays in the active memory cache only for a limited amount of time, usually up to 4 hours.
-
-If the query that you run returns less than the page_size that you specify or the default page size of 2,000 (if you do not specify a page size), then no scroll information is sent. In this case, only total record count is sent, for example:
-
-```
-"total": {
-   "record_count": 1410
- }
-```
-## 7. Updates and Revisions
-August 27, 2019
+## 6. Updates and Revisions
+#August 27, 2019
 
 A database update was released on August 27, 2019, containing revised data for 2017 and other changes (see full description on the ARMS data product <a href="http://cmsv2.usda.net/data-products/arms-farm-financial-and-crop-production-practices/update-and-revision-history/">here</a>).
 
