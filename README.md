@@ -264,7 +264,8 @@ Production Specialty (spec)
 * All other livestock
  
 ## 6. Updates and Revisions
-##August 27, 2019
+
+**August 27, 2019**
 
 A database update was released on August 27, 2019, containing revised data for 2017 and other changes (see full description on the ARMS data product <a href="http://cmsv2.usda.net/data-products/arms-farm-financial-and-crop-production-practices/update-and-revision-history/">here</a>).
 
