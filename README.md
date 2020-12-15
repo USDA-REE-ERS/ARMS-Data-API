@@ -266,9 +266,11 @@ Production Specialty (spec)
 ## 6. Updates and Revisions
 
 **December 18, 2020**
+
 A database update was released on December 18, 2020, containing new data for 2019 and updates and revisions to historical data across 1996-2018. See full description on the ARMS data product <a href="https://www.ers.usda.gov/data-products/arms-farm-financial-and-crop-production-practices/update-and-revision-history/">here</a>).
 
 **December 10, 2019**
+
 A database update was released on December 10, 2019, containing new data for 2018, new variables defined across the 1996-2018 period, and updates and revisions to historical data. See full description on the ARMS data product <a href="https://www.ers.usda.gov/data-products/arms-farm-financial-and-crop-production-practices/update-and-revision-history/">here</a>).
 
 **August 29, 2019**
