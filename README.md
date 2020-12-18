@@ -265,6 +265,25 @@ Production Specialty (spec)
  
 ## 6. Updates and Revisions
 
+**December 18, 2020**
+
+A database update was released on December 18, 2020, containing new data for 2019 and updates and revisions to historical data across 1996-2018. See full description on the ARMS data product <a href="https://www.ers.usda.gov/data-products/arms-farm-financial-and-crop-production-practices/update-and-revision-history/">here</a>).
+
+This update includes the release of new farm and household finances data for 2019 and includes changes to improve internal consistency in data-handling methods.
+
+* Previously posted estimates of Adjusted Gross Income (AGI) for 1996-2018 were updated to reflect a change in methods for how limitations to deduct retirement contributions   as well other deductions are modeled across time. The new limitations result in an increase in estimated AGI of $4,400 at the national level (5.3 percent) compared to the   previous method.
+
+
+**December 10, 2019**
+
+This update includes the release of new farm and household finances data for 2018, contains new variables that are defined across the 1996-2018 period, and includes changes to improve internal consistency in data-handling methods.
+
+New data in this release include:
+* In the Government Payments tailored report, a revised classification of government payments from 1996 to the present into five separate program types (direct payments, countercyclical-type payments, marketing loan benefit payments, conservation payments, and other program payments). These categories are described more fully in The Evolving Distribution of Payments From Commodity, Conservation, and Federal Crop Insurance Programs (EIB-184, November 2017). The change will improve comparisons across years because the previous method for categorizing government programs referred to individual farm bill programs that did not persist across the entire time period.
+
+
+A database update was released on December 10, 2019, containing new data for 2018, new variables defined across the 1996-2018 period, and updates and revisions to historical data. See full description on the ARMS data product <a href="https://www.ers.usda.gov/data-products/arms-farm-financial-and-crop-production-practices/update-and-revision-history/">here</a>).
+
 **August 29, 2019**
 
 A database update was released on August 27, 2019, containing revised data for 2017 and other changes (see full description on the ARMS data product <a href="https://www.ers.usda.gov/data-products/arms-farm-financial-and-crop-production-practices/update-and-revision-history/">here</a>).
